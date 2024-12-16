@@ -1,6 +1,11 @@
 # Gym-Git-Exercise-Solutions
 
+## Bundle 1
+
 ## Exercise 1
+
+### Task 1
+
 
 ```powershell
 PS C:\Users\mbric\Documents\Sook> mkdir Gym-Git-Exercise-Solutions
@@ -19,13 +24,13 @@ PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> ls
 PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git init
 ```
 
-## Exercise 3
+### Task 3
 
 ```powershell
 PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git branch -m main  
 ```
 
-## Exercise 4
+### Task 4
 
 ```powershell
 PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git add . 
@@ -35,13 +40,13 @@ PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git commit -m "Init
  create mode 100644 index.html
 ```
 
-## Exercise 5
+### Task 5
 
 ```powershell
 PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git remote add origin https://github.com/alain-michael/Gym-Git-Exercise-Solutions.git    
 ```
 
-## Exercise 6
+### Task 6
 
 ```powershell
 PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git push
@@ -56,19 +61,19 @@ To https://github.com/alain-michael/Gym-Git-Exercise-Solutions.git
 branch 'main' set up to track 'origin/main'.
 ```
 
-## Exercise 7
+### Task 7
 
 ```powershell
 PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git branch dev
 ```
 
-## Exercise 8
+### Task 8
 
 ```powershell
 PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git branch test dev
 ```
 
-## Exercise 9
+### Task 9
 
 ```powershell
 PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git switch dev
@@ -76,4 +81,39 @@ Switched to branch 'dev'
 M       README.md
 PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git branch -d test
 Deleted branch test (was f6305a9).
+```
+
+## Exercise 2
+
+### Task 1
+
+```powershell
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git stash -u
+Saved working directory and index state WIP on dev: 0a40e6e Added terminal logs to README.md
+```
+
+### Task 2
+
+```powershell
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git stash -u
+Saved working directory and index state WIP on dev: 0a40e6e Added terminal logs to README.md
+```
+
+### Task 3
+
+```powershell
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git stash -u
+Saved working directory and index state WIP on dev: 0a40e6e Added terminal logs to README.md
+```
+
+### Task 4
+
+```powershell
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git stash pop "stash@{1}"
+```
+
+### Task 5
+
+```powershell
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git stash pop "stash@{2}"
 ```
