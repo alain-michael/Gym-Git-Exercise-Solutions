@@ -117,3 +117,40 @@ PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git stash pop "stas
 ```powershell
 PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git stash pop "stash@{2}"
 ```
+### Task 6
+
+```powershell
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git stash pop "stash@{3}"
+```
+### Task 7
+
+```powershell
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git add .
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git commit -m "Exercise 2"
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git push
+```
+### Task 8
+
+```powershell
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git reset --hard
+HEAD is now at b20fb3a Step 6 of Git Exercises
+```
+
+## Bundle 2
+
+## Exercise 1
+
+### Task 1
+
+```powershell
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git checkout -b ft/bundle-2           
+Switched to a new branch 'ft/bundle-2'
+```
+
+### Task 3
+
+```powershell
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git add services.html
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git commit -m "Task 3"
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git push origin ft/bundle-2
+```
