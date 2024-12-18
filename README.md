@@ -216,3 +216,187 @@ Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
 To https://github.com/alain-michael/Gym-Git-Exercise-Solutions.git
    1dba6c6..4e93b0d  ft/service-redesign -> ft/service-redesign
 ```
+
+## Bundle 3
+
+### Exercise 1
+
+```powershell
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git switch -c ft/team-page
+Switched to a new branch 'ft/team-page'
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git add team.html
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git commit -m "Changes to team.html"
+[ft/team-page 8c82fb4] Changes to team.html
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 468 bytes | 156.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/alain-michael/Gym-Git-Exercise-Solutions/pull/new/ft/team-page
+remote:
+To https://github.com/alain-michael/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git switch main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 4 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git branch ft/contact-page
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git switch ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git log
+commit 8c82fb409b16a57fd732abeb0a802a724d4bf09c (HEAD -> ft/team-page, origin/ft/team-page)
+Author: amuhirwa <a.muhirwa@alustudent.com>
+Date:   Wed Dec 18 10:32:33 2024 +0200
+
+    Changes to team.html
+
+commit 0ec0a8ecf7a9f97d3bb0c5c6ddc72b0c3361c9c9 (origin/ft/service-redesign, ft/service-redesign)
+Author: amuhirwa <a.muhirwa@alustudent.com>
+Date:   Wed Dec 18 10:30:24 2024 +0200
+
+    Done with Bundle 2
+
+commit 4e93b0d65e950ea7c8f321c2d9c5dd27683cb791
+Merge: 1dba6c6 a730656
+Author: amuhirwa <a.muhirwa@alustudent.com>
+Date:   Wed Dec 18 08:20:23 2024 +0200
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git checkout ft/contact-page                            
+Switched to branch 'ft/contact-page'
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git cherry-pick 8c82fb409b16a57fd732abeb0a802a724d4bf09c
+[ft/contact-page 5c58529] Changes to team.html
+ Date: Wed Dec 18 10:32:33 2024 +0200
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git add .
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git commit -m "New changes to the contact page" 
+[ft/contact-page ae655b3] New changes to the contact page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 contact.html
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git push
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 906 bytes | 226.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/alain-michael/Gym-Git-Exercise-Solutions/pull/new/ft/contact-page
+remote:
+To https://github.com/alain-michael/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git switch -c ft/faq-page
+Switched to a new branch 'ft/faq-page'
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git add .   
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git commit -m "Faq Page"
+[ft/faq-page 9c4474f] Faq Page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 417 bytes | 208.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/alain-michael/Gym-Git-Exercise-Solutions/pull/new/ft/faq-page
+remote:
+To https://github.com/alain-michael/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git revert 8c82fb409b16a57fd732abeb0a802a724d4bf09c
+[ft/faq-page a9aa36a] Revert "Changes to team.html"
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git add .
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git status             
+On branch ft/faq-page
+Your branch is ahead of 'origin/ft/faq-page' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 350 bytes | 116.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/alain-michael/Gym-Git-Exercise-Solutions.git
+   9c4474f..a9aa36a  ft/faq-page -> ft/faq-page
+```
+
+### Exercise 2
+
+```powershell
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git branch ft/home-page-redesign ft/faq-page
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git switch main
+Switched to branch 'main'
+M       README.md
+Your branch is behind 'origin/main' by 11 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git add .
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git commit -m "Changed team.html"
+[main 1a64f36] Changed team.html
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git pull
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Auto-merging team.html
+CONFLICT (content): Merge conflict in team.html
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git pull
+error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git pull
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git push
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 603 bytes | 301.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/alain-michael/Gym-Git-Exercise-Solutions.git
+   542b878..facd142  main -> main
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git switch ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git add .
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git commit -m "Added heading to home.html"
+[ft/home-page-redesign 096effb] Added heading to home.html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 333 bytes | 333.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/alain-michael/Gym-Git-Exercise-Solutions/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/alain-michael/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+```
