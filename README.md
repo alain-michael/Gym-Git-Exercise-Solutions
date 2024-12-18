@@ -400,3 +400,54 @@ To https://github.com/alain-michael/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
 branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 ```
+
+## Bundle 4
+### Exercise 1
+
+```powershell
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git checkout main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 3 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git remote add git-copy https://github.com/alain-michael/GIT-Copy.git
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git remote
+git-copy
+origin
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git pull
+error: Your local changes to the following files would be overwritten by merge:
+        home.html
+Please commit your changes or stash them before you merge.
+Aborting
+Updating facd142..5fe678c
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git pull
+Updating facd142..5fe678c
+Fast-forward
+ README.md | 184 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ home.html |   2 +-
+ 2 files changed, 185 insertions(+), 1 deletion(-)
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git add .
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git commit -m "Bundle 4 Exercise 1"
+[main 920cd0b] Bundle 4 Exercise 1
+ 1 file changed, 13 insertions(+), 7 deletions(-)
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git push --all
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 582 bytes | 582.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/alain-michael/Gym-Git-Exercise-Solutions.git
+   0a40e6e..b20fb3a  dev -> dev
+   5fe678c..920cd0b  main -> main
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git push git-copy
+Enumerating objects: 66, done.
+Counting objects: 100% (66/66), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (64/64), done.
+Writing objects: 100% (66/66), 14.32 KiB | 2.05 MiB/s, done.
+Total 66 (delta 34), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (34/34), done.
+To https://github.com/alain-michael/GIT-Copy.git
+ * [new branch]      main -> main
+```
