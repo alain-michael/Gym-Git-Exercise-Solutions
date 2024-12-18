@@ -155,3 +155,64 @@ PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git commit -m "Task
 PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git push origin ft/bundle-2
 ```
 
+## Exercise 2
+
+```powershell
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git switch main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 6 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git pull
+Updating f6305a9..236cc01
+Fast-forward
+ README.md     | 132 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ about.html    |  11 +++++
+ home.html     |  11 +++++
+ services.html |  11 +++++
+ team.html     |  11 +++++
+ 5 files changed, 174 insertions(+), 2 deletions(-)
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 services.html
+ create mode 100644 team.html
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git branch ft/service-redesign               
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git switch ft/service-redesign
+Switched to branch 'ft/service-redesign'
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git diff main
+diff --git a/services.html b/services.html
+index dbdabfe..39f691c 100644
+--- a/services.html
++++ b/services.html
+@@ -9,7 +9,7 @@
+     <h1>Services Page</h1>
+     <a href="index.html">Home</a>
+     <a href="about.html">About</a>
+-    <a href="team.html">Our Team</a>
+-    <a href="services.html">Our Services</a>
++    <a href="team.html">Team</a>
++    <a href="services.html">Services</a>
+   </body>
+ </html>
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git merge
+Already up to date.
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git merge main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git add .
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git commit -m "Resolved merge conflicts"
+[ft/service-redesign 4e93b0d] Resolved merge conflicts
+PS C:\Users\mbric\Documents\Sook\Gym-Git-Exercise-Solutions> git push
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 224 bytes | 224.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/alain-michael/Gym-Git-Exercise-Solutions.git
+   1dba6c6..4e93b0d  ft/service-redesign -> ft/service-redesign
+```
